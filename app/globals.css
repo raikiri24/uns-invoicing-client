@@ -19,24 +19,28 @@
 }
 
 :root {
+  --background: #f9f9fb;
+  --foreground: #111827;
+  --primary: oklch(0.96 0.005 270);
+  --primary-foreground: #ffffff;
+  --sidebar-bg: #1f2937;
+  --sidebar-text: #ffffff;
+  --border: #e5e7eb;
+  --input: #ffffff;
+  --muted-foreground: #6b7280;
+  --warning: #f97316;
   --radius: 0.5rem;
-
-  /* Light Theme */
-  --background: oklch(0.98 0.002 270); /* Soft White */
-  --foreground: oklch(0.26 0.01 150); /* Charcoal */
-  --primary: #14b8a6; /* Olive Green */
-  --primary-foreground: oklch(0.98 0.002 270); /* White text on primary */
-  --border: oklch(0.91 0.005 90); /* Subtle line */
-  --input: oklch(0.95 0.003 270); /* Input BG */
-  --muted-foreground: oklch(0.45 0.01 150); /* Muted text */
-  --destructive: oklch(0.6 0.25 27); /* Red for danger */
+  --accordion-bg: var(--primary); /* Background for header and content */
+  --accordion-border: var(--border);
+  --accordion-foreground: var(--foreground);
+  --accordion-muted: var(--muted-foreground);
 }
 
 .dark {
   /* Dark Theme */
   --background: oklch(0.26 0.01 150); /* Charcoal */
-  --foreground: oklch(0.98 0.002 270); /* Soft white text */
-  --primary: #14b8a6; /* Brighter olive */
+  --foreground: oklch(0.98 0.002 270); /* Light text */
+  --primary: #14b8a6;
   --primary-foreground: oklch(0.98 0.002 270);
   --border: oklch(0.5 0.01 150 / 30%);
   --input: oklch(0.3 0.01 150 / 30%);

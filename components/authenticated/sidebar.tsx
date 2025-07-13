@@ -9,14 +9,49 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
+import {
+  BanknoteArrowDown,
+  ChartNoAxesCombined,
+  Home,
+  NotebookPen,
+  UsersRound,
+} from "lucide-react";
 
 export function AuthenticatedSidebar({ children }: React.PropsWithChildren) {
   const links = [
     {
-      label: "Dashboard",
-      href: "#",
+      label: "Home",
+      href: "/home",
       icon: (
-        <IconBrandTabler className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+        <Home className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+      ),
+    },
+    {
+      label: "Customers",
+      href: "/customers",
+      icon: (
+        <UsersRound className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+      ),
+    },
+    {
+      label: "Quote",
+      href: "/quote",
+      icon: (
+        <NotebookPen className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+      ),
+    },
+    {
+      label: "Expenses",
+      href: "/expenses",
+      icon: (
+        <BanknoteArrowDown className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+      ),
+    },
+    {
+      label: "Reports and Analytics",
+      href: "/reports-and-analytics",
+      icon: (
+        <ChartNoAxesCombined className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
     },
     {
@@ -64,7 +99,7 @@ export function AuthenticatedSidebar({ children }: React.PropsWithChildren) {
           <div>
             <SidebarLink
               link={{
-                label: "Manu Arora",
+                label: "Paul Lanot",
                 href: "#",
                 icon: (
                   <img
@@ -80,14 +115,14 @@ export function AuthenticatedSidebar({ children }: React.PropsWithChildren) {
           </div>
         </SidebarBody>
       </Sidebar>
-      <div className="flex flex-1 bg-white">{children}</div>
+      <div className="flex flex-1">{children}</div>
     </div>
   );
 }
 export const Logo = () => {
   return (
     <a
-      href="#"
+      href="/"
       className="relative z-20 flex items-center space-x-2 py-1 text-sm font-normal text-black"
     >
       <div className="h-5 w-6 shrink-0 rounded-tl-lg rounded-tr-sm rounded-br-lg rounded-bl-sm bg-black dark:bg-white" />
@@ -96,7 +131,7 @@ export const Logo = () => {
         animate={{ opacity: 1 }}
         className="font-medium whitespace-pre text-black dark:text-white"
       >
-        Acet Labs
+        Leandro's Lab
       </motion.span>
     </a>
   );

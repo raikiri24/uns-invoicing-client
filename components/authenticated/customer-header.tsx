@@ -31,7 +31,7 @@ const CustomerHeader = () => {
               <MoreVertical className="w-4 h-4" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
+          <DropdownMenuContent align="end" className="bg-background">
             <DropdownMenuItem>Import</DropdownMenuItem>
             <DropdownMenuItem>Export</DropdownMenuItem>
           </DropdownMenuContent>

@@ -36,7 +36,7 @@ export default function CustomersTable() {
   return (
     <div className="rounded-md border">
       <Table>
-        <TableHeader className="bg-gray-100">
+        <TableHeader>
           <TableRow>
             <TableHead>ID</TableHead>
             <TableHead>Name</TableHead>
